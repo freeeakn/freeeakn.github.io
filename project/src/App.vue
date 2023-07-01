@@ -1,5 +1,24 @@
-<script setup lang="ts">
+<script setup>
+import { VueperSlides, VueperSlide } from 'vueperslides'
 
+const slides = [
+  {
+    title: 'Лендинг RuComp',
+    image: 'https://cdn-edge.kwork.ru/files/portfolio/t0_r/45/a8cb0fba607fbca5379afbc1c50fbbf56a98e07a-1687965703.webp'
+  },
+  {
+    title: 'Лендинг RuComp',
+    image: 'https://cdn-edge.kwork.ru/files/portfolio/t0_r/73/1609e7a47af0bb0c33113e7bc50e488f331ee59e-1687965705.webp'
+  },
+  {
+    title: 'Социальная сеть',
+    image: 'https://cdn-edge.kwork.ru/files/portfolio/t0_r/41/c67de7905c6ab5c5562a00f1f7df2561ce7cbcb9-1687965489.webp'
+  },
+  {
+    title: 'Социальная сеть',
+    image: 'https://cdn-edge.kwork.ru/files/portfolio/t0_r/74/cc85f4961dd868dcf9a9f8d03c51eb4b733718e1-1687965488.webp'
+  },
+]
 </script>
 
 <template>
@@ -56,14 +75,13 @@
             <h2 class="text-4xl md:text-8xl italic">Mои работы</h2>
         </div>
     </section>
-    <section class="demo flex justify-center items-center w-full pb-16">
-        <div class="max-w-[1000px] flex flex-col gap-12">
-                <img src="https://cdn-edge.kwork.ru/files/portfolio/t0_r/45/a8cb0fba607fbca5379afbc1c50fbbf56a98e07a-1687965703.webp" alt="primer1">
-                <img src="https://cdn-edge.kwork.ru/files/portfolio/t0_r/73/1609e7a47af0bb0c33113e7bc50e488f331ee59e-1687965705.webp" alt="primer2">
-                <img src="https://cdn-edge.kwork.ru/files/portfolio/t0_r/41/c67de7905c6ab5c5562a00f1f7df2561ce7cbcb9-1687965489.webp" alt="primer3">
-                <img src="https://cdn-edge.kwork.ru/files/portfolio/t0_r/74/cc85f4961dd868dcf9a9f8d03c51eb4b733718e1-1687965488.webp" alt="primer4">
-                <img src="https://uploads-ssl.webflow.com/647d6a55df963a10c4b05ad5/647d9d5ad5098dea153e466f_Screenshot%202023-06-05%20at%2015.31.00.png" alt="primer5">
-        </div>
+    <section class="demo">
+        <vueper-slides fixed-height="900px">
+            <vueper-slide
+                v-for="(slide, i) in slides"
+                :key="i"
+                :image="slide.image" />
+        </vueper-slides>
     </section>
     <section class="flex justify-center items-center w-full h-screen min-h-[800px]" id="contact">
         <div class="max-w-[1000px] flex flex-col justify-center items-center gap-10">
@@ -81,11 +99,11 @@
     </section>
   </main>
   <footer>
-    <div class="flex justify-center items-center w-full h-screen min-h-[800px]" id="footer">
-        <div class="max-w-[1000px] flex flex-col justify-center items-center gap-10">
-            <h2 class="text-4xl md:text-8xl italic">Заинтересованы в работе со мной?</h2>
-            <p class="text-justify text-3xl">
-                НАПИШИТЕ СЕЙЧАС И ПОЛУЧИТЕ СКИДКУ НА ЗАКАЗ САЙТА В РАЗМЕРЕ 25 процентов
+    <div class="flex justify-center items-center w-full py-10" id="footer">
+        <div class="max-w-[1000px] flex flex-col justify-center items-center gap-5">
+            <h2 class="logo text-3xl">Arthur Pechenkin</h2>
+            <p class="text-justify text-xl">
+                &copy; Copyright 2023
             </p>
         </div>
     </div>
