@@ -23,12 +23,12 @@ const slides = [
 
 <template>
   <header id="start" class=" relative header flex justify-center items-center w-full h-screen min-h-[800px] bg-black">
-    <div class="max-w-[1000px] flex flex-col items-center gap-12">
+    <div class="max-w-[1000px] flex flex-col items-center justify-center gap-12">
         <p class="font-bold">&copy; 2023</p>
-        <h1 class="logo text-4xl md:text-8xl shadow-2xl">
+        <h1 class="logo text-4xl lg:text-8xl shadow-2xl text-center">
             Arthur Pechenkin
         </h1>
-        <p class="max-w-xl italic md:not-italic md:text-center">
+        <p class="max-w-xl italic md:not-italic text-center">
             Я опытный веб-дизайнер и разработчик коммерческих сайтов. Сделаю ваш сайт красивым и заставлю его продавать.
         </p>
         <div class="flex gap-2 font-bold italic">
@@ -51,9 +51,9 @@ const slides = [
   <main>
       <section class="flex justify-center items-center w-full h-screen min-h-[800px]" id="about">
         <div class="max-w-[1000px] flex flex-col gap-10">
-            <h2 class="text-4xl md:text-8xl italic">Обо мне</h2>
+            <h2 class="text-3xl lg:text-8xl italic lg:text-left text-center">Обо мне</h2>
             <div class="grid grid-cols-2 gap-10">
-                <p class=" text-justify text-lg">
+                <p class="text-justify lg:text-lg">
                     Я студент второго курса, отделения фундаментальной информатики Новосибирского государственного университета экономики и управления. Во время учебы в университете, я успешно освоил основы маркетинга в веб-пространстве и продолжаю развиваться в этой области. Кроме того, я занимаюсь разработкой продающих лендингов и за этот период времени реализовал уже несколько успешных проектов. Я уверен, что это только начало моего пути в компьютерных науках и я готов к дальнейшему жизненному и профессиональному росту.
                 </p>
                 <div >
